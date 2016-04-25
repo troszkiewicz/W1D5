@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>If/Else: Exercise 5</title>
+
+    
+  </head>
+  <body>
+  <div id="output"></div>
+  <script>
+    var age = prompt("how old re you?"),
+    name = prompt("What is your name?"),
+    output_el = document.querySelector('#output');
+
+
+
+
+    if (age < 21) {
+      output_el.textContent = "Sorry, son";
+    } else if (name === "Bob") {
+      output_el.textContent = "You're banned, Bob!";
+    } else if ( !(age > 35) ) {
+      output_el.textContent = "ID please";
+    } else {
+      output_el.textContent = "Come on in!";
+    }
+    </script>
+    
+  </body>
+</html>

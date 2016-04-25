@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>If/Else: Date</title>
+  </head>
+  <body>  
+    <div id="output"></div>
+    <script>
+// If asked on a date, I'll be excited to go if
+// they are both financially stable and not a jerk
+
+// Additionally, if I have less than three dates this week or don't have weekend
+// plans, I'll still go, but not be as enthusiastic
+
+// Otherwise I'll politely turn them down
+
+    var financial_status = prompt("if you are financialy stable, write: stable"),
+    personality = prompt("If you are a jerk, write: jerk"), 
+    dates_this_week = prompt("write a number of dates this week"),
+    weekend_plans = prompt("If no plans, leave blank, otherwise write something"),
+    output_el = document.querySelector('#output');
+
+    if (financial_status === "stable" && personality !== 'jerk') {
+      output_el.textContent = "Absolutely, I'm free on Sunday!";
+    } else if ( dates_this_week < 3 || !weekend_plans ) {
+      output_el.textContent = "meh, why not...";
+    } else {
+      output_el.textContent = "Oh, so nice of you to think of me, but my friend is in town and...";
+    }
+    </script>
+  </body>
+</html>
